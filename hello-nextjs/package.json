@@ -1,0 +1,35 @@
+{
+  "name": "hello-nextjs",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+		"lint": "run-s lint:*",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check '*.js' '**/*.{ts,tsx}'",
+		"lint-fix": "run-p lint-fix:*",
+		"lint-fix:eslint": "eslint . --fix",
+		"lint-fix:prettier": "prettier --write '*.js' '**/*.{ts,tsx}'"
+  },
+  "dependencies": {
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.0",
+    "@types/react": "17.0.37",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.4"
+  }
+}
