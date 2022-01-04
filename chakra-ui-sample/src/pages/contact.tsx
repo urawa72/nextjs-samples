@@ -1,7 +1,10 @@
-import type { NextPage } from 'next';
+import { ReactElement } from 'react';
+import BaseLayout from '../components/layout/BaseLayout';
 
-const Contact: NextPage = () => {
+export default function Contact() {
   return <div>This is a contact page!!!!!!!</div>;
-};
+}
 
-export default Contact;
+Contact.getLayout = function getLayout(page: ReactElement) {
+  return <BaseLayout>{page}</BaseLayout>;
+};

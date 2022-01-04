@@ -1,21 +1,23 @@
-import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Box, Flex, Link } from '@chakra-ui/react';
 
 export default function Sidebar() {
   return (
     <Box w="240px" h="100vh" p="32px" zIndex="10" borderRight="1px solid #eaeaea">
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <Link href="/contact">
-        <a>Contact</a>
-      </Link>
-      <Link href="/dummy">
-        <a>Dummy</a>
-      </Link>
+      <Flex flexDirection="column">
+        <NextLink href="/">
+          <Link>Home</Link>
+        </NextLink>
+        <NextLink href="/about">
+          <Link>About</Link>
+        </NextLink>
+        <NextLink href="/contact">
+          <Link>Contact</Link>
+        </NextLink>
+        <NextLink href="/dummy">
+          <Link>Dummy</Link>
+        </NextLink>
+      </Flex>
     </Box>
   );
 }
