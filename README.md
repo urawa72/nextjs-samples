@@ -4,11 +4,9 @@
 
 ```json
 "scripts": {
-  "lint": "run-s lint:*",
-  "lint:eslint": "eslint .",
-  "lint:prettier": "prettier --check '*.js' '**/*.{ts,tsx}'",
-  "lint-fix": "run-p lint-fix:*",
-  "lint-fix:eslint": "eslint . --fix",
-  "lint-fix:prettier": "prettier --write '*.js' '**/*.{ts,tsx}'",
+  "lint:check": "next lint",
+  "format:check": "prettier --check '*.js' '**/*.{ts,tsx}'",
+  "lint:fix": "next lint --fix",
+  "format:fix": "prettier --write '*.js' '**/*.{ts,tsx}'",
 }
 ```
